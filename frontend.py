@@ -2,27 +2,33 @@ from tkinter import *
 import backend
 
 def add_command():
+    """Insert entry via button."""
     backend.insert(title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
     listing.delete(0, END)
     listing.insert(END, (title_text.get(), author_text.get(), year_text.get(), isbn_text.get()))
 
 def view_command():
+    """View entries via button."""
     listing.delete(0, END)
     for row in backend.view():
         listing.insert(END, row)
 
 def update_command():
+    """Update entry via button."""
     backend.update(selected_tuple[0], title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
 
 def delete_command():
+    """Delete entry via button."""
     backend.delete(selected_tuple[0])
 
 def search_command():
+    """Search entry via button."""
     listing.delete(0, END)
     for row in backend.search(title_text.get(), author_text.get(), year_text.get(), isbn_text.get()):
         listing.insert(END, row)
 
 def get_selected_row(event):
+    """Pre-fill fields for selected entry."""
     global selected_tuple
     index = listing.curselection()[0]
     selected_tuple = listing.get(index)
