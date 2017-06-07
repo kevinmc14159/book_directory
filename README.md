@@ -19,4 +19,4 @@ To launch the GUI, open the *frontend.py* script via the console. To add an entr
 ## What I Learned
 * The main steps for working with a SQLite database are connecting to a database, creating a cursor object, writing an SQL query, commiting changes, and closing the database connection.
 * GUIs can be built with Tkinter windows and widgets. Tkinter arranges label, entry, and button widgets in a window using a grid layout. The button widgets can be linked to functions and the data in entry widgets can be extracted for use elsewhere.
-* Various Python files can interact with each other as modules. This allows for the principle of abstraction, where code can be used without knowing precisely how it was implemented.
+* Various Python files can interact with each other as modules. This allows for the principle of abstraction, where code can be used without knowing precisely how it was implemented. For this project, the frontend and backend were developed independently and later connected.
